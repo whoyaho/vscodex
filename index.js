@@ -35,7 +35,7 @@ const moving = (s) => {
     if (bump.innerHTML !== "BUMP!!!") {
       if (stoneY > 400 && stoneY < 500) {
         // console.log('middle')
-        if (Math.abs(stoneX - shipX) < 200) {
+        if (Math.abs(stoneX - shipX) < 150) {
           // console.log('bump');
           bump.innerHTML = "BUMP!!!";
           score = score - 50;
