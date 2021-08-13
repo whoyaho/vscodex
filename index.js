@@ -5,8 +5,13 @@ const bump = document.getElementById("bump");
 const timer = document.getElementById("timer");
 const gaming = document.getElementById("gaming");
 const gameOver = document.getElementById("gameOver");
+
+const height = 600;
+const width = 1000;
+const shipSize = 100;
+
 let shipX = 0;
-let shipY = 450;
+let shipY = (height - shipSize) / 2
 let stoneX = 0;
 let stoneY = 0;
 let shipDirection = 0;
@@ -26,16 +31,16 @@ const moving = (s) => {
     } else {
       shipX = shipX - s;
     }
-    if (shipX > 1100) {
+    if (shipX > width - shipSize) {
       shipDirection = 1;
     }
     if (shipX < 0) {
       shipDirection = 0;
     }
     if (bump.innerHTML !== "BUMP!!!") {
-      if (stoneY > 400 && stoneY < 500) {
+      if (stoneY > shipY - 50 && stoneY < shipY + 50) {
         // console.log('middle')
-        if (Math.abs(stoneX - shipX) < 150) {
+        if (Math.abs(stoneX - shipX) < 100) {
           // console.log('bump');
           bump.innerHTML = "BUMP!!!";
           score = score - 50;
@@ -71,10 +76,10 @@ setInterval(() => {
     stoneX = stoneX + stoneDirectionX * stoneSpeed;
     stoneY = stoneY + stoneDirectionY * stoneSpeed;
 
-    if (stoneY > 850) {
+    if (stoneY > height - shipSize) {
       stoneDirection = [stoneDirection[0], !stoneDirection[1]];
     }
-    if (stoneX > 1100) {
+    if (stoneX > width - shipSize) {
       stoneDirection = [!stoneDirection[0], stoneDirection[1]];
     }
     if (stoneY < 0) {
