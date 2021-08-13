@@ -2,18 +2,18 @@
 <html>
 
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
-
 
     <p style="color: white; font-size: 50px; margin-top: 100px;">Score: <span id="score"></span></p>
     <p id="gameOver" style="color: white; font-size: 50px; display: none; margin-top: 150px;">Game Over</span></p>
     <div id="gaming" style="position: absolute; top: 0px;">
         <div id="ship" style="width: 100px; height: 100px;">
             <p id="bump" style="color: red; position: absolute; top: -50px; left: 20px;"></p>
-            <img ondragstart="return false;" src="./ship.jpg"
+            <img draggable="false" ondragstart="return false;" src="./ship.jpg"
                 style="width: 100px; height: 100px; border-radius: 100px;" />
         </div>
 

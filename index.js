@@ -1,3 +1,5 @@
+
+
 const ship = document.getElementById("ship");
 const stone = document.getElementById("stone");
 const scoreSpan = document.getElementById("score");
@@ -6,8 +8,13 @@ const timer = document.getElementById("timer");
 const gaming = document.getElementById("gaming");
 const gameOver = document.getElementById("gameOver");
 
-const height = 600;
-const width = 1000;
+var win = window,
+    doc = document,
+    docElem = doc.documentElement,
+    body = doc.getElementsByTagName('body')[0],
+    width = win.innerWidth || docElem.clientWidth || body.clientWidth,
+    height = win.innerHeight|| docElem.clientHeight|| body.clientHeight;
+
 const shipSize = 100;
 
 let shipX = 0;
