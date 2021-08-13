@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <a href="#">Youtube(팡요랩)</a><br>
+    <a href="#">Source Code(Github)</a>
+    <p style="color: white; font-size: 50px;">Score: <span id="score"></span></p>
+    <p id="gameOver" style="color: white; font-size: 50px; display: none; margin-top: 150px;">Game Over</span></p>
+    <div id="gaming" style="position: absolute; top: 0px;">
+        <div id="ship" style="width: 100px; height: 100px;">
+            <p id="bump" style="color: red; position: absolute; top: -50px; left: 20px;"></p>
+            <img ondragstart="return false;" src="./ship.jpg"
+                style="width: 100px; height: 100px; border-radius: 100px;" />
+        </div>
+
+        <img id="stone" src="./stone.jpg"
+            style="width: 100px; height: 100px; border-radius: 100px;" />
+        <p style="color: white; font-size: 50px; margin-top: 150px;">Time: <span id="timer">60</span></p>
+    </div>
+
+    <script src="./index.js" type="text/javascript"></script>
+</body>
+
+</html>
