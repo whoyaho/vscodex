@@ -116,4 +116,3 @@ setInterval(() => {
     gameOver.style.display = "block";
   }
 }, 1000);
-``;
